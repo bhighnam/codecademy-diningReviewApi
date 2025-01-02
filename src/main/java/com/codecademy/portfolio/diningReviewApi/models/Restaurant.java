@@ -12,16 +12,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "RESTAURANTS")
+@Table(name = "resturaunts")
 public class Restaurant {
     // id
     // name
-    // user
-    // review
-    // peanutRating
-    // eggRating
-    // dairyRating
-    // averageRating( avg. peanut, egg, Dairy )
+    // peanutRating( average of all users peanut rating from 1 to 5 )
+    // eggRating( average of all users egg rating from 1 to 5 )
+    // dairyRating( average of all users dairy rating from 1 to 5 )
+    // averageRating( avg. peanut, egg, Dairy amongst all of the users )
 
     @Id
     @GeneratedValue
@@ -31,37 +29,27 @@ public class Restaurant {
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "NAME")
+    @Column(name = "name")
     private String name;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "CUSTOMER")
-    private String CUSTOMER;
-
-    @Setter( AccessLevel.PUBLIC )
-    @Getter
-    @Column(name = "REVIEW")
-    private String review;
-
-    @Setter( AccessLevel.PUBLIC )
-    @Getter
-    @Column(name = "PEANUTRATING")
+    @Column(name = "peanut_rating")
     private Integer peanutRating;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "EGGRATING")
+    @Column(name = "egg_rating")
     private Integer eggRating;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "DAIRYRATING")
+    @Column(name = "dairy_rating")
     private Integer dairyRating;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "AVERAGERATING")
+    @Column(name = "average_rating")
     private double averageRating;
 
 }
