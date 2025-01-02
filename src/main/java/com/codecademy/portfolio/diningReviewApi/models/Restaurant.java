@@ -20,13 +20,13 @@ public class Restaurant {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     @Column(name = "NAME")
     private String name;
 
-    @Column(name = "USER")
-    private String user;
+    @Column(name = "CUSTOMER")
+    private String CUSTOMER;
 
     @Column(name = "REVIEW")
     private String review;
@@ -42,4 +42,11 @@ public class Restaurant {
 
     @Column(name = "AVERAGERATING")
     private double averageRating;
+
+    public void setId( Integer id ) {
+        this.id = id;
+    }
+    public Integer getId() {
+        return this.id;
+    }
 }
