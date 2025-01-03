@@ -48,15 +48,15 @@ public class Customer {
     @Setter( AccessLevel.PUBLIC )
     @Getter
     @Column(name = "interest_peanut")
-    private Integer interestPeanut;
+    private Integer interestPeanut = 1;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
     @Column(name = "interest_egg")
-    private Integer interestEgg;
+    private Integer interestEgg = 1;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "interest_Dairy")
-    private Integer interestDairy;
+    @Column(name = "interest_dairy")
+    private Integer interestDairy = 1;
 }

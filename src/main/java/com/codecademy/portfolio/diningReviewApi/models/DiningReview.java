@@ -39,7 +39,7 @@ public class DiningReview {
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "customer_name")
+    @Column(name = "customerName")
     private String customerName; // references 1-N
 
     @Setter( AccessLevel.PUBLIC )
