@@ -1,5 +1,7 @@
 package com.codecademy.portfolio.diningReviewApi.models;
 
+import com.codecademy.portfolio.diningReviewApi.enums.DiningStatus;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
@@ -23,6 +25,7 @@ public class DiningReview {
        an optional dairy score, on a scale of 1-5
        an optional commentary
      */
+    
     @Id
     @GeneratedValue
     @Setter( AccessLevel.PUBLIC )
@@ -58,4 +61,9 @@ public class DiningReview {
     @Getter
     @Column(name = "diary_score")
     private Integer dairyScore;
+
+    @Setter( AccessLevel.PUBLIC )
+    @Getter
+    @Column(name = "status")
+    private DiningStatus status = DiningStatus.PENDING;
 }
