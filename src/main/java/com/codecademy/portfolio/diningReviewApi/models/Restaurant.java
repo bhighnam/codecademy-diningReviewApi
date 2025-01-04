@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "resturaunts")
+@Table(name = "restaurants")
 public class Restaurant {
     // id
     // name

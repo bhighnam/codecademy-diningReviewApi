@@ -39,13 +39,8 @@ public class DiningReview {
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "customer_name")
-    private String customerName; // references 1-N
-
-    @Setter( AccessLevel.PUBLIC )
-    @Getter
-    @Column(name = "resturant_id")
-    private Integer resturantId; // references 1-N
+    @Column(name = "restaurant_id")
+    private Integer restaurantId; // references 1-N
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
