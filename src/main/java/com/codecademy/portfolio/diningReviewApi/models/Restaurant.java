@@ -29,27 +29,32 @@ public class Restaurant {
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
-    @Column(name = "name")
-    private String name;
+    @Column(name = "restaurant_name")
+    private String restaurantName;
+
+    @Setter( AccessLevel.PUBLIC )
+    @Getter
+    @Column(name = "zip_code")
+    private String zipCode;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
     @Column(name = "peanut_rating")
-    private Integer peanutRating;
+    private Integer peanutRating = 0;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
     @Column(name = "egg_rating")
-    private Integer eggRating;
+    private Integer eggRating = 0;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
     @Column(name = "dairy_rating")
-    private Integer dairyRating;
+    private Integer dairyRating = 0;
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
     @Column(name = "average_rating")
-    private double averageRating;
+    private double averageRating = 0;
 
 }
