@@ -4,6 +4,7 @@ import com.codecademy.portfolio.diningReviewApi.models.Restaurant;
 
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,8 +34,11 @@ public class RestaurantController {
     }
 
     // get restaurant by id
-
-    // get all resturaunts
+    @GetMapping("/restaurant/{id}")
+    public Restaurant getRestaurantById( @PathVariable("id") Integer restaurantId ) {
+        return ( this.restaurantRepository.findById( restaurantId ) ).get();
+    }
 
     // modify restaurant
+    
 }

@@ -34,6 +34,11 @@ public class Restaurant {
 
     @Setter( AccessLevel.PUBLIC )
     @Getter
+    @Column(name = "zip_code")
+    private String zipCode;
+
+    @Setter( AccessLevel.PUBLIC )
+    @Getter
     @Column(name = "peanut_rating")
     private Integer peanutRating = 0;
 
