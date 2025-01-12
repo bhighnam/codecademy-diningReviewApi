@@ -40,5 +40,53 @@ public class RestaurantController {
     }
 
     // modify restaurant
-    
+    @PutMapping("/restaurant/update" )
+    public Restaurant updateRestaurant( @RequestBody Restaurant restaurant ) {
+        Restaurant restaurantToBeUpdated = this.restaurantRepository.findByRestaurantName(restaurant.getRestaurantName() );
+
+        if( restaurantToBeUpdated == null ) {
+            System.out.println( "Restaurant has not been found! Canceling update" );
+            return null;
+        }
+        System.out.println( "Restaurant been found! Updating record" );
+
+        if( restaurant.getRestaurantName() == null ) {
+            System.out.println( "Nothing to update for restaurant name" );
+        }
+        else {
+            restaurantToBeUpdated.setRestaurantName( restaurant.getRestaurantName() );
+        }
+
+        if( restaurant.getZipCode() == null ) {
+            System.out.println( "Nothing to update for restaurant zip code" );
+        }
+        else {
+            restaurantToBeUpdated.setZipCode( restaurant.getZipCode() );
+        }
+
+        if( restaurant.getPeanutRating() == null ) {
+            System.out.println( "Nothing to update for restaurant peanut rating" );
+        }
+        else {
+            restaurantToBeUpdated.setPeanutRating( restaurant.getPeanutRating() );
+        }
+
+        if( restaurant.getDairyRating() == null ) {
+            System.out.println( "Nothing to update for restaurant dairy rating" );
+        }
+        else {
+            restaurantToBeUpdated.setDairyRating( restaurant.getDairyRating() );
+        }
+
+        if( restaurant.getEggRating() == null ) {
+            System.out.println( "Nothing to update for restaurant egg rating" );
+        }
+        else {
+            restaurantToBeUpdated.setEggRating( restaurant.getDairyRating() );
+        }
+        
+        this.restaurantRepository.save( restaurantToBeUpdated );
+        return restaurantToBeUpdated;
+    }
+
 }
